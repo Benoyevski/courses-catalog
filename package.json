@@ -1,0 +1,17 @@
+{
+  "name": "test-catalog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/main.scss css/main.css --watch",
+    "sass:build": "sass scss/main.scss css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.100.0"
+  }
+}

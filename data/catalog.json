@@ -1,0 +1,152 @@
+{
+  "page": {
+    "subtitle": "ENJOY YOUR STUDYING!",
+    "title": "Our online courses"
+  },
+  "categories": [
+    { "id": "all", "label": "All" },
+    { "id": "marketing", "label": "Marketing" },
+    { "id": "management", "label": "Management" },
+    { "id": "hr-recruiting", "label": "HR & Recruiting" },
+    { "id": "design", "label": "Design" },
+    { "id": "development", "label": "Development" }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "image": "images/image-1.webp",
+      "category": "marketing",
+      "title": "The Ultimate Google Ads Training Course",
+      "price": 100,
+      "author": "Jerome Bell"
+    },
+    {
+      "id": 2,
+      "image": "images/image-2.webp",
+      "category": "management",
+      "title": "Prduct Management Fundamentals",
+      "price": 480,
+      "author": "Marvin McKinney"
+    },
+    {
+      "id": 3,
+      "image": "images/image-3.webp",
+      "category": "hr-recruiting",
+      "title": "HR Management and Analytics",
+      "price": 200,
+      "author": "Leslie Alexander Li"
+    },
+    {
+      "id": 4,
+      "image": "images/image-4.webp",
+      "category": "marketing",
+      "title": "Brand Management & PR Communications",
+      "price": 530,
+      "author": "Kristin Watson"
+    },
+    {
+      "id": 5,
+      "image": "images/image-5.webp",
+      "category": "design",
+      "title": "Graphic Design Basic",
+      "price": 500,
+      "author": "Guy Hawkins"
+    },
+    {
+      "id": 6,
+      "image": "images/image-6.webp",
+      "category": "management",
+      "title": "Business Development Management",
+      "price": 400,
+      "author": "Dianne Russell"
+    },
+    {
+      "id": 7,
+      "image": "images/image-7.webp",
+      "category": "development",
+      "title": "Highload Software Architecture",
+      "price": 600,
+      "author": "Brooklyn Simmons"
+    },
+    {
+      "id": 8,
+      "image": "images/image-8.webp",
+      "category": "hr-recruiting",
+      "title": "Human Resources – Selection and Recruitment",
+      "price": 150,
+      "author": "Kathryn Murphy"
+    },
+    {
+      "id": 9,
+      "image": "images/image-9.webp",
+      "category": "design",
+      "title": "User Experience. Human-centered Design",
+      "price": 240,
+      "author": "Cody Fisher"
+    },
+    {
+      "id": 10,
+      "image": "images/image-10.webp",
+      "category": "marketing",
+      "title": "Digital Marketing Strategy",
+      "price": 320,
+      "author": "Eleanor Pena"
+    },
+    {
+      "id": 11,
+      "image": "images/image-11.webp",
+      "category": "marketing",
+      "title": "SEO and Content Marketing",
+      "price": 130,
+      "author": "Robert Fox"
+    },
+    {
+      "id": 12,
+      "image": "images/image-12.webp",
+      "category": "management",
+      "title": "Agile Team Leadership",
+      "price": 380,
+      "author": "Courtney Henry"
+    },
+    {
+      "id": 13,
+      "image": "images/image-13.webp",
+      "category": "hr-recruiting",
+      "title": "Talent Acquisition Fundamentals",
+      "price": 190,
+      "author": "Jane Cooper"
+    },
+    {
+      "id": 14,
+      "image": "images/image-14.webp",
+      "category": "hr-recruiting",
+      "title": "Employee Onboarding Best Practices",
+      "price": 175,
+      "author": "Albert Flores"
+    },
+    {
+      "id": 15,
+      "image": "images/image-15.webp",
+      "category": "hr-recruiting",
+      "title": "Compensation & Benefits Planning",
+      "price": 220,
+      "author": "Theresa Webb"
+    },
+    {
+      "id": 16,
+      "image": "images/image-16.webp",
+      "category": "development",
+      "title": "Full-Stack JavaScript Bootcamp",
+      "price": 550,
+      "author": "Ralph Edwards"
+    },
+    {
+      "id": 17,
+      "image": "images/image-17.webp",
+      "category": "development",
+      "title": "REST API Design Patterns",
+      "price": 340,
+      "author": "Annette Black"
+    }
+  ]
+}
