@@ -14,6 +14,11 @@
   box-shadow: variables.$shadow-small;
   overflow: hidden;
 
+  &:hover {
+    box-shadow: variables.$shadow-hover;
+    transition: box-shadow 0.2s;
+  }
+
   &__image-wrap {
     flex-shrink: 0;
     height: mixins.fluid(160px, variables.$card-image-height);
