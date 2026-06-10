@@ -9,6 +9,7 @@
   }
 
   &__button {
+    @include mixins.focus-visible-ring;
     padding: 10px 12px;
     font-size: mixins.fluid(14px, 16px);
     font-weight: 700;

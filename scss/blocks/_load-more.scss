@@ -1,6 +1,8 @@
 @use '../variables';
+@use '../mixins';
 
 .load-more {
+  @include mixins.focus-visible-ring;
   display: inline-flex;
   align-items: center;
   gap: 16px;

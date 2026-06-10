@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "serve .",
     "sass": "sass scss/main.scss css/main.css --watch",
     "sass:build": "sass scss/main.scss css/main.css"
   },
@@ -12,6 +13,7 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "sass": "^1.100.0"
+    "sass": "^1.100.0",
+    "serve": "^14.2.4"
   }
 }

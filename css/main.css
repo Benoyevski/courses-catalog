@@ -171,6 +171,13 @@ a {
   flex-wrap: wrap;
   gap: 12px;
 }
+.filter__button:focus {
+  outline: none;
+}
+.filter__button:focus-visible {
+  outline: 2px solid #ff3f3a;
+  outline-offset: 2px;
+}
 .filter__button {
   padding: 10px 12px;
   font-size: clamp(14px, 14px + (16px - 14px) * (100vw - 320px) / (1920px - 320px), 16px);
@@ -200,6 +207,13 @@ a {
 .search {
   position: relative;
   width: min(100%, 315px);
+}
+.search__input:focus {
+  outline: none;
+}
+.search__input:focus-visible {
+  outline: 2px solid #ff3f3a;
+  outline-offset: 2px;
 }
 .search__input {
   width: 100%;
@@ -315,6 +329,13 @@ a {
   color: #787a80;
 }
 
+.load-more:focus {
+  outline: none;
+}
+.load-more:focus-visible {
+  outline: 2px solid #ff3f3a;
+  outline-offset: 2px;
+}
 .load-more {
   display: inline-flex;
   align-items: center;

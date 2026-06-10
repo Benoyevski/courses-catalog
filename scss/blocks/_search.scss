@@ -6,6 +6,7 @@
   width: min(100%, 315px);
 
   &__input {
+    @include mixins.focus-visible-ring;
     width: 100%;
     height: mixins.fluid(40px, 44px);
     padding: mixins.fluid(10px, 12px) mixins.fluid(40px, 44px)

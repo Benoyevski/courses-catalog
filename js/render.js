@@ -5,10 +5,19 @@ const SEARCH_ICON = `
   </svg>
 `;
 
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 export function renderHeader(container, page) {
   container.innerHTML = `
-    <p class="courses__subtitle">${page.subtitle}</p>
-    <h1 class="courses__title">${page.title}</h1>
+    <p class="courses__subtitle">${escapeHtml(page.subtitle)}</p>
+    <h1 class="courses__title">${escapeHtml(page.title)}</h1>
   `;
 }
 
@@ -23,10 +32,10 @@ export function renderFilters(container, categories, activeCategory, counts) {
           <button
             class="filter__button${activeClass}"
             type="button"
-            data-category="${category.id}"
+            data-category="${escapeHtml(category.id)}"
             ${isActive ? 'aria-current="true"' : ''}
           >
-            <span class="filter__label">${category.label}</span><sup class="filter__count">${counts[category.id] ?? 0}</sup>
+            <span class="filter__label">${escapeHtml(category.label)}</span><sup class="filter__count">${escapeHtml(counts[category.id] ?? 0)}</sup>
           </button>
         </li>
       `;
@@ -48,7 +57,7 @@ export function renderSearch(container, searchQuery) {
         type="search"
         name="search"
         placeholder="Search course..."
-        value="${searchQuery}"
+        value="${escapeHtml(searchQuery)}"
         autocomplete="off"
         aria-label="Search course"
       />
@@ -66,22 +75,22 @@ function createCourseCard(item, categoryLabels) {
         <div class="course-card__image-wrap">
           <img
             class="course-card__image"
-            src="${item.image}"
-            alt="${item.title}"
+            src="${escapeHtml(item.image)}"
+            alt="${escapeHtml(item.title)}"
             loading="lazy"
             width="390"
             height="240"
           />
         </div>
         <div class="course-card__body">
-          <span class="course-card__badge course-card__badge--${item.category}">
-            ${categoryLabel}
+          <span class="course-card__badge course-card__badge--${escapeHtml(item.category)}">
+            ${escapeHtml(categoryLabel)}
           </span>
-          <h2 class="course-card__title">${item.title}</h2>
+          <h2 class="course-card__title">${escapeHtml(item.title)}</h2>
           <div class="course-card__meta">
-            <span class="course-card__price">$${item.price}</span>
+            <span class="course-card__price">$${escapeHtml(item.price)}</span>
             <span class="course-card__divider">|</span>
-            <span class="course-card__author">by ${item.author}</span>
+            <span class="course-card__author">by ${escapeHtml(item.author)}</span>
           </div>
         </div>
       </article>
