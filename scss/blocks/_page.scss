@@ -1,0 +1,15 @@
+@use '../mixins';
+
+.page {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding-top: mixins.fluid(20px, 44px);
+  padding-bottom: mixins.fluid(60px, 86px);
+
+  &__container {
+    @include mixins.container;
+    position: relative;
+    z-index: 1;
+  }
+}

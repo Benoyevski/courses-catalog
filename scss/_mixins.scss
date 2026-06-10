@@ -1,0 +1,14 @@
+@use 'variables';
+
+@function fluid($min, $max) {
+  @return clamp(
+    #{$min},
+    #{$min} + (#{$max} - #{$min}) * ((100vw - #{variables.$design-min}) / (#{variables.$design-max} - #{variables.$design-min})),
+    #{$max}
+  );
+}
+
+@mixin container {
+  width: min(#{variables.$container-max}, 100% - fluid(16px, 340px) * 2);
+  margin-inline: auto;
+}

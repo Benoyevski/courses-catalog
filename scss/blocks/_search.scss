@@ -1,0 +1,40 @@
+@use '../variables';
+@use '../mixins';
+
+.search {
+  position: relative;
+  width: min(100%, 315px);
+
+  &__input {
+    width: 100%;
+    height: mixins.fluid(40px, 44px);
+    padding: mixins.fluid(10px, 12px) mixins.fluid(40px, 44px)
+      mixins.fluid(10px, 12px) mixins.fluid(14px, 16px);
+    font-size: mixins.fluid(14px, 16px);
+    line-height: 1.6;
+    color: variables.$color-text;
+    background-color: variables.$color-white;
+    border: 1px solid variables.$color-border;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: variables.$color-text-muted;
+    }
+
+    &:focus {
+      border-color: variables.$color-text-secondary;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: mixins.fluid(12px, 16px);
+    transform: translateY(-50%);
+    width: mixins.fluid(14px, 16px);
+    height: mixins.fluid(14px, 16px);
+    color: variables.$color-text-muted;
+    pointer-events: none;
+  }
+}

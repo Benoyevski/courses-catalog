@@ -1,0 +1,101 @@
+@use '../variables';
+@use '../mixins';
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: mixins.fluid(260px, variables.$card-width);
+  min-height: mixins.fluid(360px, variables.$card-height);
+  height: 100%;
+  background-color: variables.$color-white;
+  border: 1px solid variables.$color-card-border;
+  border-radius: 4px;
+  box-shadow: variables.$shadow-small;
+  overflow: hidden;
+
+  &__image-wrap {
+    flex-shrink: 0;
+    height: mixins.fluid(160px, variables.$card-image-height);
+    overflow: hidden;
+    background-color: #ffbc00;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: mixins.fluid(120px, variables.$card-body-min-height);
+    gap: mixins.fluid(16px, 20px);
+    padding: mixins.fluid(20px, 24px);
+  }
+
+  &__badge {
+    align-self: flex-start;
+    padding: 4px 8px;
+    font-size: mixins.fluid(11px, 14px);
+    font-weight: 700;
+    line-height: 1.5;
+    color: variables.$color-white;
+    border-radius: 4px;
+
+    &--marketing {
+      background-color: variables.$color-badge-marketing;
+    }
+
+    &--management {
+      background-color: variables.$color-badge-management;
+    }
+
+    &--hr-recruiting {
+      background-color: variables.$color-badge-hr;
+    }
+
+    &--design {
+      background-color: variables.$color-badge-design;
+    }
+
+    &--development {
+      background-color: variables.$color-badge-development;
+    }
+  }
+
+  &__title {
+    flex-grow: 1;
+    min-height: calc(2 * 1.5em);
+    font-size: mixins.fluid(16px, 20px);
+    font-weight: 700;
+    line-height: 1.5;
+    color: variables.$color-text;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    font-size: mixins.fluid(14px, 18px);
+    line-height: 1.6;
+  }
+
+  &__price {
+    font-weight: 700;
+    color: variables.$color-accent;
+  }
+
+  &__divider {
+    color: variables.$color-text-muted;
+  }
+
+  &__author {
+    color: variables.$color-text-secondary;
+  }
+}

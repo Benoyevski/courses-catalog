@@ -1,0 +1,39 @@
+@use '../variables';
+@use '../mixins';
+
+.filter {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__button {
+    padding: 10px 12px;
+    font-size: mixins.fluid(14px, 16px);
+    font-weight: 700;
+    line-height: 1.6;
+    color: variables.$color-text-muted;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: variables.$color-text-secondary;
+    }
+
+    &--active {
+      color: variables.$color-accent;
+      border-color: variables.$color-accent;
+    }
+  }
+
+  &__count {
+    margin-left: 4px;
+    font-size: 0.625em;
+    font-weight: 400;
+    line-height: 0;
+    vertical-align: super;
+    color: inherit;
+  }
+}

@@ -1,26 +1,47 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Каталог</title>
+    <title>Our online courses</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
-    <div class="page">
-      <header class="header">
-        <h1 class="header__title">Каталог</h1>
-      </header>
+  <body class="page">
+    <img class="decoration decoration--dots" src="images/icons/dots.svg" alt="" aria-hidden="true" />
 
-      <nav class="tabs" id="tabs" aria-label="Категории"></nav>
+    <img
+      class="decoration decoration--shapes decoration--shapes-left"
+      src="images/icons/shapes.svg"
+      alt=""
+      aria-hidden="true"
+    />
 
-      <main class="catalog" id="catalog"></main>
+    <img
+      class="decoration decoration--arrows decoration--arrows-right"
+      src="images/icons/arrows.svg"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <div class="page__container">
+      <section class="courses" id="courses">
+        <header class="courses__header" id="courses-header"></header>
+
+        <div class="courses__controls">
+          <nav class="courses__filters" id="courses-filters" aria-label="Categories"></nav>
+          <div class="courses__search" id="courses-search"></div>
+        </div>
+
+        <ul class="courses__list" id="courses-list"></ul>
+        <p class="courses__empty" id="courses-empty" hidden>No courses found</p>
+        <div class="courses__load-more" id="courses-load-more"></div>
+      </section>
     </div>
 
     <script type="module" src="js/main.js"></script>

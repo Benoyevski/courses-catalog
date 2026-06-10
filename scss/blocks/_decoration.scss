@@ -1,0 +1,32 @@
+@use '../mixins';
+
+.decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  display: block;
+  max-width: none;
+  height: auto;
+
+  &--dots {
+    top: mixins.fluid(24px, 90px);
+    right: mixins.fluid(0px, 0px);
+    width: mixins.fluid(70px, 143px);
+  }
+
+
+  &--shapes {
+    top: mixins.fluid(300px, 637px);
+    left: mixins.fluid(8px, 56px);
+    width: mixins.fluid(50px, 85px);
+    transform: translateY(-50%);
+  }
+
+  &--arrows {
+    top: mixins.fluid(600px, 1050px);
+    right: mixins.fluid(8px, 72px);
+    width: mixins.fluid(50px, 83px);
+    transform: translateY(-50%);
+  }
+
+}

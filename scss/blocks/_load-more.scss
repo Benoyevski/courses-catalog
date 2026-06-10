@@ -1,0 +1,23 @@
+@use '../variables';
+
+.load-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  height: 26px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  color: variables.$color-load-more;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+}
