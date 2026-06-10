@@ -12,6 +12,7 @@ import {
   renderFilters,
   renderSearch,
   renderCourseList,
+  appendCourseCards,
   renderEmptyState,
   renderLoadMore,
 } from './render.js';
@@ -58,8 +59,17 @@ function handleClick(event) {
   const loadMoreButton = event.target.closest('.load-more');
 
   if (loadMoreButton && loadMoreEl.contains(loadMoreButton)) {
+    const filteredItems = getFilteredItems(state);
+    const startIndex = state.visibleCount;
+
     state.visibleCount += ITEMS_PER_PAGE;
-    render({ updateFilters: false, updateSearch: false });
+
+    appendCourseCards(
+      listEl,
+      filteredItems.slice(startIndex, state.visibleCount),
+      categoryLabels,
+    );
+    renderLoadMore(loadMoreEl, hasMoreItems(state, filteredItems));
   }
 }
 

@@ -104,6 +104,17 @@ export function renderCourseList(container, items, categoryLabels) {
     .join('');
 }
 
+export function appendCourseCards(container, items, categoryLabels) {
+  if (items.length === 0) {
+    return;
+  }
+
+  container.insertAdjacentHTML(
+    'beforeend',
+    items.map((item) => createCourseCard(item, categoryLabels)).join(''),
+  );
+}
+
 export function renderEmptyState(container, isVisible) {
   container.hidden = !isVisible;
 }
